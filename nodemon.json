@@ -1,0 +1,5 @@
+{
+  "watch": ["server", "app.ts"],
+  "ext": "ts",
+  "exec": "ts-node ./server --env=development"
+}

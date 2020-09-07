@@ -1,0 +1,34 @@
+{
+  "name": "dinnerisready",
+  "version": "0.0.1",
+  "private": true,
+  "author": "Giovanni Incammicia",
+  "main": "dist/server.js",
+  "baseUrlPath": "/api",
+  "scripts": {
+    "start": "tsc && node ./dist/server/index.js",
+    "dev": "nodemon --config nodemon.json",
+    "all": "concurrently \"npm run dev\" \"cd client && npm start\"",
+    "heroku-postbuild": "npm install && cd client && npm install && npm run build"
+  },
+  "dependencies": {
+    "@types/body-parser": "^1.19.0",
+    "@types/express": "^4.17.7",
+    "@types/helmet": "0.0.47",
+    "@types/mongoose": "^5.7.36",
+    "@types/morgan": "^1.9.1",
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "~4.16.1",
+    "helmet": "^3.23.3",
+    "mongoose": "^5.9.28",
+    "morgan": "~1.9.1",
+    "typescript": "^3.9.7"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0",
+    "express-oas-generator": "^1.0.26",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2"
+  }
+}
